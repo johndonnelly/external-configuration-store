@@ -8,6 +8,7 @@ using System.Reactive.Subjects;
 using System.Threading;
 using System.Threading.Tasks;
 using ExternalConfigurationStore.Core.Infrastructure;
+using ExternalConfigurationStore.Core.Option;
 using ExternalConfigurationStore.Core.SettingsStore;
 
 namespace ExternalConfigurationStore.Core.SettingProvider
@@ -40,13 +41,13 @@ namespace ExternalConfigurationStore.Core.SettingProvider
         /// Initializes a new instance of the <see cref="CacheSettings"/> class.
         /// </summary>
         /// <param name="settingStore">The setting store.</param>
-        /// <param name="refreshInterval">The refresh interval.</param>
-        public CacheSettings(ISettingStore settingStore, int refreshInterval)
+        /// <param name="cacheSettingsOptions">The options to configure the <see cref="CacheSettings"/> provider.</param>
+        public CacheSettings(ISettingStore settingStore, CacheSettingsOptions cacheSettingsOptions)
         {
             if (settingStore == null)
                 throw new ArgumentNullException(nameof(settingStore));
 
-            if (refreshInterval < 0)
+            if (cacheSettingsOptions.RefreshInterval < 0)
                 throw new IndexOutOfRangeException("refreshInterval cannot be negative.");
             
             // Get the settings from the store.
@@ -54,12 +55,12 @@ namespace ExternalConfigurationStore.Core.SettingProvider
             _settings = new ConcurrentDictionary<string, string>(_settingStore.GetAllAsync().GetResultSynchronously());
 
             // If zero, data will be persistent.
-            if (refreshInterval == 0) return;
+            if (cacheSettingsOptions.RefreshInterval == 0) return;
 
             // Initialize the repeated task.
             _cancellationTokenSource = new CancellationTokenSource();
             _updateTask = Repeat.Interval(
-                TimeSpan.FromSeconds(refreshInterval),
+                TimeSpan.FromSeconds(cacheSettingsOptions.RefreshInterval),
                 UpdateSettingsAsync, _cancellationTokenSource.Token);
         }
 

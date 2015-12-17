@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using ExternalConfigurationStore.AzureStorageExtensions;
 using ExternalConfigurationStore.Core;
+using ExternalConfigurationStore.Core.Option;
 using ExternalConfigurationStore.Core.SettingProvider;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
@@ -12,20 +13,12 @@ namespace ExternalConfigurationStoreConsole
     {
         static void Main(string[] args)
         {
-            var o = new JObject { { "Name", "Jim" } };
-
-
             ExternalConfigurationManager.Initialize(
                 () => new CacheSettings(
                     new TableSettingsStore(
                         ConfigurationManager.AppSettings.Get("ExternalConfigrationConnectionString"),
-                        ConfigurationManager.AppSettings.Get("AppSettingTableName")).WithKeyValue("Key", "Value") , 20*60));
-
-
-            foreach (var appSetting in ExternalConfigurationManager.AppSettings)
-            {
-                
-            }
+                        ConfigurationManager.AppSettings.Get("AppSettingTableName")).WithKeyValue("Key", "Value"),
+                    new CacheSettingsOptions {RefreshInterval = 20*60}));
 
             ExternalConfigurationManager.Release();
         }
