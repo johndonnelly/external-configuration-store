@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.AzureStorageExtensions", "ExternalConfigurationStore.AzureStorageExtensions\ExternalConfigurationStore.AzureStorageExtensions.csproj", "{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStoreConsole", "ExternalConfigurationStoreConsole\ExternalConfigurationStoreConsole.csproj", "{814816F9-6B8B-48D2-A106-BB48E78E9309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.Core", "ExternalConfigurationStore.Core\ExternalConfigurationStore.Core.csproj", "{3F455210-8463-42A5-AE99-CC324E41F827}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F455210-8463-42A5-AE99-CC324E41F827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F455210-8463-42A5-AE99-CC324E41F827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F455210-8463-42A5-AE99-CC324E41F827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F455210-8463-42A5-AE99-CC324E41F827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
