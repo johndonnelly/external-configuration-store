@@ -22,6 +22,7 @@ namespace ExternalConfigurationStore.Core.SettingProvider
         private readonly ConcurrentDictionary<string, string> _settings;
         private readonly ISubject<KeyValuePair<string, string>> _changed = new Subject<KeyValuePair<string, string>>();
         private readonly CancellationTokenSource _cancellationTokenSource;
+        private readonly CacheSettingsOptions _cacheSettingsOptions;
         private readonly Task _updateTask;
         private bool _disposed;
 
@@ -46,21 +47,22 @@ namespace ExternalConfigurationStore.Core.SettingProvider
         {
             if (settingStore == null)
                 throw new ArgumentNullException(nameof(settingStore));
+            _settingStore = settingStore;
 
             if (cacheSettingsOptions.RefreshInterval < 0)
                 throw new IndexOutOfRangeException("refreshInterval cannot be negative.");
-            
+            _cacheSettingsOptions = cacheSettingsOptions;
+
             // Get the settings from the store.
-            _settingStore = settingStore;
             _settings = new ConcurrentDictionary<string, string>(_settingStore.GetAllAsync().GetResultSynchronously());
 
             // If zero, data will be persistent.
-            if (cacheSettingsOptions.RefreshInterval == 0) return;
+            if (_cacheSettingsOptions.RefreshInterval == 0) return;
 
             // Initialize the repeated task.
             _cancellationTokenSource = new CancellationTokenSource();
             _updateTask = Repeat.Interval(
-                TimeSpan.FromSeconds(cacheSettingsOptions.RefreshInterval),
+                TimeSpan.FromSeconds(_cacheSettingsOptions.RefreshInterval),
                 UpdateSettingsAsync, _cancellationTokenSource.Token);
         }
 
@@ -112,7 +114,7 @@ namespace ExternalConfigurationStore.Core.SettingProvider
                 throw new ArgumentNullException(nameof(name));
 
             string value;
-            return _settings.TryGetValue(name, out value) ? value : null;
+            return _settings.TryGetValue(name, out value) ? value : _cacheSettingsOptions.FallBackFunc?.Invoke(name);
         }
 
         private async Task UpdateSettingsAsync()

@@ -1,4 +1,5 @@
-﻿using ExternalConfigurationStore.Core.SettingProvider;
+﻿using System;
+using ExternalConfigurationStore.Core.SettingProvider;
 
 namespace ExternalConfigurationStore.Core.Option
 {
@@ -11,5 +12,10 @@ namespace ExternalConfigurationStore.Core.Option
         /// Gets the refresh interval.
         /// </summary>
         public int RefreshInterval { get; set; }
+
+        /// <summary>
+        /// Gets a fallback function executed if a setting is not found.
+        /// </summary>
+        public Func<string, string> FallBackFunc { get; set; }
     }
 }
