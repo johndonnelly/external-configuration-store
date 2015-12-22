@@ -9,12 +9,12 @@
         /// <summary>
         /// Gets the key column name.
         /// </summary>
-        protected string KeyColumnName { get; private set; } = "key";
+        protected virtual string KeyColumnName { get; private set; } = "key";
 
         /// <summary>
         /// Gets the value column name.
         /// </summary>
-        protected string ValueColumnName { get; private set; } = "value";
+        protected virtual string ValueColumnName { get; private set; } = "value";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SettingsStoreMapper{T}"/> class.

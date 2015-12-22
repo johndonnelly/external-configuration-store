@@ -1,34 +1,68 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.AzureStorageExtensions", "ExternalConfigurationStore.AzureStorageExtensions\ExternalConfigurationStore.AzureStorageExtensions.csproj", "{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStoreConsole", "ExternalConfigurationStoreConsole\ExternalConfigurationStoreConsole.csproj", "{814816F9-6B8B-48D2-A106-BB48E78E9309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.Core", "ExternalConfigurationStore.Core\ExternalConfigurationStore.Core.csproj", "{3F455210-8463-42A5-AE99-CC324E41F827}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ExternalConfigurationStore.Core", "ExternalConfigurationStore.Core\ExternalConfigurationStore.Core.shproj", "{DBD19A2B-5505-4515-8E47-FE429CA75D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.Core_45", "ExternalConfigurationStore.Core_45\ExternalConfigurationStore.Core_45.csproj", "{88E10E73-E477-4A75-B6B8-C34ADD2FF91D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2A08A136-A2F3-49B8-8D96-86116CE6E13E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{3524B6E3-7EFE-494C-A0B1-0EFC0048A9AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ExternalConfigurationStore.DatabaseExtensions", "ExternalConfigurationStore.DatabaseExtensions\ExternalConfigurationStore.DatabaseExtensions.shproj", "{7D985B49-43C9-48F6-AACD-2938D9FCCF10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.DatabaseExtensions_45", "ExternalConfigurationStore.DatabaseExtensions_45\ExternalConfigurationStore.DatabaseExtensions_45.csproj", "{6CE5F630-3105-4BA8-B5DA-4A883C682D20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureStorage", "AzureStorage", "{9814EDB5-73E0-4CC2-B454-AD313F2BCB8E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ExternalConfigurationStore.AzureStorageExtensions", "ExternalConfigurationStore.AzureStorageExtensions\ExternalConfigurationStore.AzureStorageExtensions.shproj", "{884285C7-AB33-4A6C-BAC6-E497A98244C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalConfigurationStore.AzureStorageExtensions_45", "ExternalConfigurationStore.AzureStorageExtensions_45\ExternalConfigurationStore.AzureStorageExtensions_45.csproj", "{DF43E5FF-01C3-4FFF-9AFF-14E9E009976A}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ExternalConfigurationStore.Core\ExternalConfigurationStore.Core.projitems*{88e10e73-e477-4a75-b6b8-c34add2ff91d}*SharedItemsImports = 4
+		ExternalConfigurationStore.AzureStorageExtensions\ExternalConfigurationStore.AzureStorageExtensions.projitems*{884285c7-ab33-4a6c-bac6-e497a98244c3}*SharedItemsImports = 13
+		ExternalConfigurationStore.AzureStorageExtensions\ExternalConfigurationStore.AzureStorageExtensions.projitems*{df43e5ff-01c3-4fff-9aff-14e9e009976a}*SharedItemsImports = 4
+		ExternalConfigurationStore.DatabaseExtensions\ExternalConfigurationStore.Database.projitems*{7d985b49-43c9-48f6-aacd-2938d9fccf10}*SharedItemsImports = 13
+		ExternalConfigurationStore.DatabaseExtensions\ExternalConfigurationStore.Database.projitems*{6ce5f630-3105-4ba8-b5da-4a883c682d20}*SharedItemsImports = 4
+		ExternalConfigurationStore.Core\ExternalConfigurationStore.Core.projitems*{dbd19a2b-5505-4515-8e47-fe429ca75d08}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDC35E0D-6861-4BDE-8BA8-80AD619C4711}.Release|Any CPU.Build.0 = Release|Any CPU
 		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{814816F9-6B8B-48D2-A106-BB48E78E9309}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F455210-8463-42A5-AE99-CC324E41F827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F455210-8463-42A5-AE99-CC324E41F827}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F455210-8463-42A5-AE99-CC324E41F827}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F455210-8463-42A5-AE99-CC324E41F827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E10E73-E477-4A75-B6B8-C34ADD2FF91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E10E73-E477-4A75-B6B8-C34ADD2FF91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E10E73-E477-4A75-B6B8-C34ADD2FF91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E10E73-E477-4A75-B6B8-C34ADD2FF91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE5F630-3105-4BA8-B5DA-4A883C682D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE5F630-3105-4BA8-B5DA-4A883C682D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE5F630-3105-4BA8-B5DA-4A883C682D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE5F630-3105-4BA8-B5DA-4A883C682D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF43E5FF-01C3-4FFF-9AFF-14E9E009976A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF43E5FF-01C3-4FFF-9AFF-14E9E009976A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF43E5FF-01C3-4FFF-9AFF-14E9E009976A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF43E5FF-01C3-4FFF-9AFF-14E9E009976A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DBD19A2B-5505-4515-8E47-FE429CA75D08} = {2A08A136-A2F3-49B8-8D96-86116CE6E13E}
+		{88E10E73-E477-4A75-B6B8-C34ADD2FF91D} = {2A08A136-A2F3-49B8-8D96-86116CE6E13E}
+		{7D985B49-43C9-48F6-AACD-2938D9FCCF10} = {3524B6E3-7EFE-494C-A0B1-0EFC0048A9AA}
+		{6CE5F630-3105-4BA8-B5DA-4A883C682D20} = {3524B6E3-7EFE-494C-A0B1-0EFC0048A9AA}
+		{884285C7-AB33-4A6C-BAC6-E497A98244C3} = {9814EDB5-73E0-4CC2-B454-AD313F2BCB8E}
+		{DF43E5FF-01C3-4FFF-9AFF-14E9E009976A} = {9814EDB5-73E0-4CC2-B454-AD313F2BCB8E}
 	EndGlobalSection
 EndGlobal

@@ -97,13 +97,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExternalConfigurationStore.AzureStorageExtensions\ExternalConfigurationStore.AzureStorageExtensions.csproj">
-      <Project>{edc35e0d-6861-4bde-8ba8-80ad619c4711}</Project>
-      <Name>ExternalConfigurationStore.AzureStorageExtensions</Name>
+    <ProjectReference Include="..\ExternalConfigurationStore.AzureStorageExtensions_45\ExternalConfigurationStore.AzureStorageExtensions_45.csproj">
+      <Project>{df43e5ff-01c3-4fff-9aff-14e9e009976a}</Project>
+      <Name>ExternalConfigurationStore.AzureStorageExtensions_45</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ExternalConfigurationStore.Core\ExternalConfigurationStore.Core.csproj">
-      <Project>{3f455210-8463-42a5-ae99-cc324e41f827}</Project>
-      <Name>ExternalConfigurationStore.Core</Name>
+    <ProjectReference Include="..\ExternalConfigurationStore.Core_45\ExternalConfigurationStore.Core_45.csproj">
+      <Project>{88e10e73-e477-4a75-b6b8-c34add2ff91d}</Project>
+      <Name>ExternalConfigurationStore.Core_45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalConfigurationStore.DatabaseExtensions_45\ExternalConfigurationStore.DatabaseExtensions_45.csproj">
+      <Project>{6ce5f630-3105-4ba8-b5da-4a883c682d20}</Project>
+      <Name>ExternalConfigurationStore.DatabaseExtensions_45</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

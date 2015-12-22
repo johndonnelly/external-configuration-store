@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExternalConfigurationStore")]
+[assembly: AssemblyTitle("ExternalConfigurationStore.Core_45")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExternalConfigurationStore")]
+[assembly: AssemblyProduct("ExternalConfigurationStore.Core_45")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3f455210-8463-42a5-ae99-cc324e41f827")]
+[assembly: Guid("88e10e73-e477-4a75-b6b8-c34add2ff91d")]
 
 // Version information for an assembly consists of the following four values:
 //

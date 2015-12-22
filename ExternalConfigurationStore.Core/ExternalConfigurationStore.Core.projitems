@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dbd19a2b-5505-4515-8e47-fe429ca75d08</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ExternalConfigurationStore.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ExternalConfigurationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\CancellationTokenExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Repeat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Option\CacheSettingsOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SettingProvider\CacheSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SettingProvider\ISettingProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SettingsStore\ISettingStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SettingsStore\SettingsStoreMapper.cs" />
+  </ItemGroup>
+</Project>

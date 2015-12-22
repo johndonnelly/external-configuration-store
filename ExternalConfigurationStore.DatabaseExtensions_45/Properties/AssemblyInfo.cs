@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExternalConfigurationStore.AzureStorageExtensions")]
+[assembly: AssemblyTitle("ExternalConfigurationStore.DatabaseExtensions_45")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExternalConfigurationStore.AzureStorageExtensions")]
+[assembly: AssemblyProduct("ExternalConfigurationStore.DatabaseExtensions_45")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("edc35e0d-6861-4bde-8ba8-80ad619c4711")]
+[assembly: Guid("6ce5f630-3105-4ba8-b5da-4a883c682d20")]
 
 // Version information for an assembly consists of the following four values:
 //
